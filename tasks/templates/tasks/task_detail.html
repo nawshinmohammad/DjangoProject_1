@@ -1,0 +1,25 @@
+{% extends "tasks/base.html" %}
+
+{% block title %}Task Details{% endblock %}
+
+
+{% block content %}
+  
+
+    <div class="task-card">
+      <h2>{{ task.task_title }}</h2>
+      <p>Owner: {{ task.owner|title }}</p> 
+      <p>Description: {{ task.description }}</p>
+      <p>Task created at: {{ task.created_at }}</p>
+      <p>Deadline: {{ task.due_date }}</p>
+      <p>Status: {{ task.get_status_display }}</p> 
+      
+    </div>
+
+    <nav>
+    <a href="{% url 'update_task' task.id %}">Edit |</a>
+    <a href="{% url 'delete_task' task.id %}">Delete</a>
+    </nav>
+  
+
+{%endblock%}

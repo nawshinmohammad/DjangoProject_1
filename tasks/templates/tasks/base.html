@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Tasks{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'tasks/style.css' %}">
+</head>
+<body>
+
+    {% if user.is_authenticated %}
+        <span class="username">Hi, {{ request.user.username|upper }}!</span>
+     <nav>   
+        <a href="{% url 'home' %}">Home | </a> 
+        <a href="{% url 'task_list' %}">My Tasks |</a>
+        <a href="{% url 'task_create' %}">Create Tasks | </a>
+        <form method="post" action="{% url 'logout' %}" style="display:inline">
+            
+            {% csrf_token %}
+            <button type="submit">Log Out</button>
+        </form>
+      </nav>   
+    {% else %}
+    
+    <nav>
+        <a href="{% url 'home' %}">Home |</a> 
+        <a href="{% url 'login' %}"> Log In |</a>
+        <a href="{% url 'signup' %}"> Sign Up </a>
+
+    </nav>
+
+
+    {% endif %}
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>Task Manager App built with Django by Nawshin</p>
+    </footer>
+</body>
+</html>

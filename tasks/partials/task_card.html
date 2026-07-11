@@ -1,0 +1,9 @@
+<div class="task-card">
+      <h2>{{ task.task_title }}</h2>
+      <p>Owner: {{ task.owner }}</p> 
+      <p>Description: {{ task.description }}</p>
+      <p>Task created at: {{ task.created_at }}</p>
+      <p>Deadline: {{ task.due_date }}</p>
+      <p>Status: {{ task.get_status_display }}</p> 
+      
+</div>

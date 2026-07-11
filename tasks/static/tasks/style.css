@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f7f7f7;
+    color: #222;
+    line-height: 1.7;
+}
+
+nav {
+    color: #ffffff;
+    text-decoration: none;
+    background: #1f0c12;
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.username {
+    
+    color: gold;
+    text-decoration: none;
+    background: #1f0c12;
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    
+}
+
+
+h2 {
+    margin-bottom: 16px;
+}
+
+.task-card {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 8px;
+    margin-bottom: 12px;
+}
+
+.task-meta {
+    color: #666666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.task-cover {
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+footer {
+    margin-top: 32px;
+    color: #2f2b2b;
+    text-align: center;
+}

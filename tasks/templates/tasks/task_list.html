@@ -1,0 +1,30 @@
+{% extends "tasks/base.html" %}
+
+{% block title %}Tasks{% endblock %}
+
+
+{% block content %}
+  <h1>Tasks:</h1>
+
+  <form method="get">
+  <input type="text" name="search" placeholder="Search tasks" value="{{ search|default:'' }}">
+  <button type="submit">Search</button>
+</form>
+
+  
+  {% for task in task %}
+
+    <div class="task-card">
+      <h2>{{ task.task_title }}</h2>
+      <span><a href="{% url 'task_details' task.id %}">View Task</a> </span>
+    </div>
+{% empty %}
+    <p>No tasks yet.</p>
+
+  {% endfor %}
+
+{%endblock%}
+
+
+
+    
